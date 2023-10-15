@@ -1,0 +1,51 @@
+body{
+    background-color: lightgray;                    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(./img/basketball.png.png),url(./img/red\ sneakers.png.png);
+    background-size: contain,43%;
+    background-repeat:   no-repeat;
+    background-position: left bottom 10%,right bottom 180%;  
+
+}
+.heading{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    margin-top: 100px;
+}
+.login-text{
+    text-align: center;
+    font-family: bold;
+    font-size: 35px;
+    margin-top: 20px;
+}
+.login-form {
+    text-align: center;
+    margin-top: 20px;
+}
+.name{
+    font-family:bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 600px;
+}
+.password{
+    font-family: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 605px;
+}
+.button{
+    font-weight: bold;
+    margin: 10px auto; 
+    display: block; 
+    text-align: center; 
+    border-width: 4px;
+    cursor: pointer;
+}
+.signup{
+    font-size: medium;
+    margin-left: 610px;
+}
