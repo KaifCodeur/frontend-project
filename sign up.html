@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgrey;
+        }
+        .quote{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+
+        .container {
+            max-width: 350px;
+            margin-top: 150px;
+            margin-left: 570px;
+            padding: 40px;
+            border: 1px solid rgb(0,0,33); /* Add border styles here */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            background-color: #fff; /* Set the background color for the form */
+        }
+        .sign {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="sign">Sign Up</h1>
+        <form id="signup-form" action="process_signup.php" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name "password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button class="submit" type="submit" id="signup-button">Sign Up</button>
+        </form>
+    </div>
+    <div>     <h1 class="quote">  <srtrong> &hearts;if loving shoes is a crime,we plead guilty!</srtrong></h1> </div>
+
+    <script>
+        // JavaScript code to redirect after successful sign-up
+        document.getElementById("signup-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Here, you can add code to process the sign-up (e.g., form validation, server communication).
+
+            // If sign-up is successful, redirect to the login page.
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>
