@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var attempt = 3;
+
+        function validateForm() {
+            var x = $("#fname").val();
+            var y = $("#fpassword").val();
+            
+            if (x === "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if (y === "") {
+                alert("Password must be filled out");
+                return false;
+            }
+        }
+
+        $("form[name='login']").submit(function(event) {
+            event.preventDefault(); 
+
+            var username = $("#fname").val();
+            var password = $("#fpassword").val();
+
+            if (username === "team8@gmail.com" && password === "TEAM8") {
+                alert("Login successfully");
+                window.location = "homepage.html";
+            } else 
+            if (username === "vamsi8@gmail.com" && password === "TEAM8") {
+                alert("Login successfully");
+                window.location = "homepage.html";
+            } else
+            if (username === "kaif8@gmail.com" && password === "TEAM8") {
+                alert("Login successfully");
+                window.location = "homepage.html";
+            } else
+            if (username === "sudheer8@gmail.com" && password === "TEAM8") {
+                alert("Login successfully");
+                window.location = "homepage.html";
+            } else{
+                alert("Incorrect Password !! You have left " + attempt + " attempt;");
+                attempt--;
+
+                if (attempt === 0) {
+                    $("#fname, #fpassword, #submit").prop("disabled", true);
+                }
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <h1 class="heading">Online shopping Mart</h1>
+    <div class="login-text">Enter your login credentials:</div>
+    
+    <form name="login" onsubmit="return validateForm()" method="post">
+        <p class="name">Username: <input type="text" name="fname" id="fname"></p>
+        <p class="password">Password: <input type="password" name="fpassword" id="fpassword"></p>
+        <div class="signup">Don't have an account? <a href="sign up.html">Sign Up</a></div>
+        <input type="submit" class="button" value="Submit" class="submit" id="submit">
+    </form>
+</body>
+</html>
